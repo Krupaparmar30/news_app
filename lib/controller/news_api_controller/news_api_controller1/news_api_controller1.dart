@@ -12,8 +12,8 @@ class NewsApiController2 extends GetxController {
   Future<void> fromMap() async {
     try {
       final data = await newsApiHelper.fetchApiNewsSec();
-      newsFirstModal.value =
-          NewsFirstModal.fromApi(data as Map<String, dynamic> );
+      newsFirstModal =
+          NewsFirstModal.fromApi(data as Map<String,dynamic>).obs;
       print(newsFirstModal.value);
     } catch (e) {
       print('Error fetching news: $e');

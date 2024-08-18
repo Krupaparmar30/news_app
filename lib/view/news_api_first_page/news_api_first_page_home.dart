@@ -23,7 +23,6 @@ class Homepage extends StatelessWidget {
       length: 5,
       child: Scaffold(
           backgroundColor: Colors.black,
-
           body: Column(
             children: [
               Padding(
@@ -68,7 +67,8 @@ class Homepage extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: TabBarView(children: [
+                child:
+                TabBarView(children: [
                   FutureBuilder<NewsFirstModal?>(
                     future: newsApiController.getNews(),
                     builder: (context, snapshot) {
@@ -91,8 +91,7 @@ class Homepage extends StatelessWidget {
                                   children: [
                                     GestureDetector(
                                       onDoubleTap: () {
-
-                                        detailList=newsModal;
+                                        detailList = newsModal;
                                         selIndex = index;
                                         Get.toNamed('/det');
                                       },
@@ -118,13 +117,13 @@ class Homepage extends StatelessWidget {
                                           child: Text(
                                             "PublishedAt : ${newsModal.articles[index].publishedAt}",
                                             style: TextStyle(
-                                                color: Colors.white,
-                                                ),
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                         Padding(
-                                          padding:
-                                              const EdgeInsets.only(bottom: 30,left: 30),
+                                          padding: const EdgeInsets.only(
+                                              bottom: 30, left: 30),
                                           child: Text(
                                             "${newsModal.articles[index].reactive}\n",
                                             style:
@@ -159,17 +158,17 @@ class Homepage extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
-                              child:    Padding(
+                              child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
-                                  height:150,
+                                  height: 150,
                                   width: 600,
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       GestureDetector(
                                         onDoubleTap: () {
-                                          detailList=secModal;
+                                          detailList = secModal;
                                           selIndex = index;
                                           Get.toNamed('/det');
                                         },
@@ -187,7 +186,7 @@ class Homepage extends StatelessWidget {
                                       ),
                                       Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.start,
+                                            MainAxisAlignment.start,
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.only(
@@ -195,17 +194,17 @@ class Homepage extends StatelessWidget {
                                             child: Text(
                                               "PublishedAt : ${secModal.articles[index].publishedAt}",
                                               style: TextStyle(
-                                                  color: Colors.white,
-                                                 ),
+                                                color: Colors.white,
+                                              ),
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                            const EdgeInsets.only(bottom: 30,right: 20),
+                                            padding: const EdgeInsets.only(
+                                                bottom: 30, right: 20),
                                             child: Text(
                                               "${secModal.articles[index].reactive}\n",
-                                              style:
-                                              TextStyle(color: Colors.white),
+                                              style: TextStyle(
+                                                  color: Colors.white),
                                             ),
                                           ),
                                         ],
@@ -237,15 +236,14 @@ class Homepage extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
-                              child:
-                              Padding(
+                              child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     GestureDetector(
                                       onDoubleTap: () {
-                                        detailList=theModal;
+                                        detailList = theModal;
                                         selIndex = index;
                                         Get.toNamed('/det');
                                       },
@@ -271,8 +269,8 @@ class Homepage extends StatelessWidget {
                                           child: Text(
                                             "PublishedAt : ${theModal.articles[index].publishedAt}",
                                             style: TextStyle(
-                                                color: Colors.white,
-                                              ),
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                         Padding(
@@ -319,7 +317,7 @@ class Homepage extends StatelessWidget {
                                   children: [
                                     GestureDetector(
                                       onDoubleTap: () {
-                                        detailList=frothModal;
+                                        detailList = frothModal;
                                         selIndex = index;
                                         Get.toNamed('/det');
                                       },
@@ -345,8 +343,8 @@ class Homepage extends StatelessWidget {
                                           child: Text(
                                             "PublishedAt : ${frothModal.articles[index].publishedAt}",
                                             style: TextStyle(
-                                                color: Colors.white,
-                                               ),
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                         Padding(
@@ -391,11 +389,12 @@ class Homepage extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    GestureDetector(onDoubleTap: () {
-                                      detailList=fiveModal;
-                                      selIndex = index;
-                                      Get.toNamed('/det');
-                                    },
+                                    GestureDetector(
+                                      onDoubleTap: () {
+                                        detailList = fiveModal;
+                                        selIndex = index;
+                                        Get.toNamed('/det');
+                                      },
                                       child: Container(
                                         height: 150,
                                         width: 150,
@@ -418,8 +417,8 @@ class Homepage extends StatelessWidget {
                                           child: Text(
                                             "PublishedAt : ${fiveModal.articles[index].publishedAt}",
                                             style: TextStyle(
-                                                color: Colors.white,
-                                             ),
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                         Padding(
